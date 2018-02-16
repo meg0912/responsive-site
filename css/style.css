@@ -19,40 +19,44 @@ body {
   text-align: center; }
 
 
-
 .box1 {
-  max-width: 1000px;
-  border: solid 0px;
-  margin: 0px auto;
+  width: 90%;
+  border: solid 1px skyblue;
+  margin: 10px;
 }
 .container {
-  display: flex;
-  flex-direction: row;
+  max-width: 1000px;
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px green;
 }
 .box2 {
   float: left;
   width: 33.333%;
   border: solid 1px tomato;
   box-sizing: border-box;
-  margin: 0px auto;
 }
 .clearfix::after {
     content: '';
     display: block;
     clear: both;
 }
+
 .flexible-images {
   max-width: 100%;
   height: auto;
 }
-.box {
-  background-image: url("./images/topimg.jpg");
-  height: 500px;
-  width: 100%;
-  background-size: cover;
-  background-position: center center;
+
+.container {
+  display: flex;
+  flex-direction: row;
 }
-@media (max-width: 250px) {
+.box {
+  border: solid 1px skyblue;
+  margin: 10px;
+  flex: 1;
+}
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
@@ -73,4 +77,17 @@ body {
   text-align: center;
   width: 200px;
   margin: 0 auto;
+}
+
+.masthead {
+    height: 500px;
+    background-image: url(http://placehold.jp/1500x1500.png);
+    background-size:cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+  .masthead {
+    height: 250px;
+  }
 }
